@@ -29,10 +29,19 @@ Optimal databases have the following properties:
 
 Necessary properties for a database are:
 
-- **A**tomicity: a transaction happens as a whole
+- **A**tomicity
 - **C**onsistency
 - **I**solation
 - **D**urability
 
 ## ANSI/SPARC DB architecture
 
+This architecture separates database functionalities into:
+- **Physical** or internal data model
+- **Conceptual** data model
+- **View** or external data model
+
+## DB models' languages
+
+All the above DB models include a **data definition language (DDL)** for specifying the structural aspects of the data, a **data manipulation language (DML)**
+for accessing and updating it and a **query language (QL)**.
