@@ -37,7 +37,7 @@ CREATE TABLE [table name] ( [column definitions] ) [table parameters]
 The **DROP TABLE** statement is used to delete a table:
 
 ```sql
-DROP TABLE Students [RESTRICT|;
+DROP TABLE Students [RESTRICT|CASCADE];
 ```
 
 ### ALTER TABLE
