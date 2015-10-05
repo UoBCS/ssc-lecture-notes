@@ -11,15 +11,6 @@ The main construct for representing data in the relational model is a **relation
 
 ## Data Definition Language
 
-The main construct for representing data in the relational model is a relation. A
-relation consists of a **relation schema** and a **relation instance**.
-
-The relation instance is a table, and the relation schema describes the column heads for the table.
-
-The schema specifies the relation’s name, the name of each field (or column, or attribute), and the domain of each field
-
-A **relational database** is a collection of relations with distinct relation names.
-
 ### CREATE TABLE
 
 The **CREATE TABLE** statement is used to define a new table:
