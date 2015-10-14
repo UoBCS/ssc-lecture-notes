@@ -49,7 +49,7 @@ catch (ClassNotFoundException e) {
 
 System.out.println("PostgreSQL driver registered.");
 
-Connection = null;
+Connection conn = null;
 String url = "jdbc:postgresql://<server>/<database>"
 
 try {
@@ -69,12 +69,50 @@ else {
 
 ## Statements
 
+There are two types of Statement objects: simple statement objects and prepared statement objects.
+
 ### Statement object
+
+Most used methods:
+
+- execute
+- executeUpdate
+- executeQuery
+
+#### executeUpdate
+
+```java
+Statement stmt = conn.createStatement(); // Reusable object (multiple queries)
+
+int n = stmt.executeUpdate("INSERT INTO Students VALUES (140, 'John', 'Smith', 1996-04-10)");
+```
+
+#### executeQuery and ResultSet objects
+
+When we execute a query we get a ResultSet object back (which we can manipulate):
+
+```java
+ResultSet rs = stmt.executeQuery("SELECT * FROM Students");
+
+while (rs.next()) {
+	int sid = rs.getInt(1);				// Positional referencing
+	String name = rs.getString("name");	// Name referencing
+}
+```
 
 ### PreparedStatement object
 
-## 
+Example:
 
+```java
+String query = "SELECT * FROM Students WHERE firstname = ? AND lastname = ?"
+PreparedStatement stmt = conn.prepareStatement(query);
+
+stmt.setString(1, "Ossama");
+stmt.setString(2, "Edbali");
+
+ResultSet rs = stmt.executeQuery();
+```
 
 ## References
 
