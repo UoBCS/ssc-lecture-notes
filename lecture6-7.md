@@ -1,4 +1,4 @@
-# Lectures 5 & 6 - 12-13/10/2015
+# Lectures 6 & 7 - 12-13/10/2015
 
 ## What is JDBC?
 
